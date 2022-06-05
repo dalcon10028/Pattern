@@ -1,0 +1,17 @@
+{
+  "name": "pattern",
+  "version": "1.0.0",
+  "main": "index.js",
+  "repository": "https://github.com/dalcon10028/Pattern.git",
+  "author": "dalcon10028 <dalcon10280@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "test": "jest --watch"
+  },
+  "devDependencies": {
+    "@types/jest": "^28.1.1",
+    "jest": "^28.1.0",
+    "ts-jest": "^28.0.4",
+    "typescript": "^4.7.3"
+  }
+}

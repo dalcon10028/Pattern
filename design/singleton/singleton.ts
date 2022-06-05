@@ -1,11 +1,12 @@
+let counter = 0;
+let instance: Counter | null = null;
+
 class Counter {
-    private counter = 0;
-    private instance = null;
     
     constructor() {
-        if (this.instance)
+        if (instance)
             throw new Error('하나의 인스턴스만 생성할 수 있습니다.');
-        this.instance = this;
+        instance = this;
     }
 
     getInstance() {
@@ -13,17 +14,17 @@ class Counter {
     }
 
     getCount() {
-        return this.counter;
+        return counter;
     }
 
     increment() {
-        return ++this.counter;
+        return counter++;
     }
 
     decrement() {
-        return --this.counter;
+        return counter--;
     }
 }
 
-const singletonCounter = Object.freeze(new Counter());
+const singletonCounter = new Counter();
 export default singletonCounter;
