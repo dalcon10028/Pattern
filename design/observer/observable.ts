@@ -1,7 +1,7 @@
 type Observer = (message: string) => void
 
-class Observerable {
-  observers: Observer[]
+export default class Observerable {
+  private observers: Observer[]
   constructor() {
     this.observers = [];
   }
@@ -14,7 +14,7 @@ class Observerable {
     this.observers = this.observers.filter(observer => observer !== fn);
   }
 
-  notify(data: string) {
-    this.observers.forEach(observer => observer(data));
+  notify(message: string) {
+    this.observers.forEach(observer => observer(message));
   }
 }
